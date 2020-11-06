@@ -8,8 +8,6 @@ services:
         build: 
             context: ./front
             dockerfile: Dockerfile
-        volumes:
-            - "./front:/src/usr/vue"
         ports:
             - "8081:8080"
         depends_on:
@@ -27,8 +25,6 @@ services:
             dockerfile: Dockerfile
         ports:
             - "4000:4000"
-        volumes:
-            - "./issues-back:/usr/src/issuesBack"
         networks:
             - mevn-app
         depends_on:
@@ -52,8 +48,6 @@ services:
             dockerfile: Dockerfile
         ports:
             - "5000:5000"       
-        volumes:
-            - "./tasks-back:/usr/src/tasksBack"
         networks:
             - mevn-app
         depends_on:
