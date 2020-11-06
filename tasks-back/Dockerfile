@@ -9,4 +9,5 @@ RUN npm install
 COPY . /usr/src/tasksBack
 
 EXPOSE 5000
+
 CMD ["npm", "start"]
